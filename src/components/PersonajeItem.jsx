@@ -5,7 +5,7 @@ const PersonajeItem = ({item}) => {
         <div className='content'>
       <div className='content-inner'>
         <div className='content-front'>
-          <img src={item.image.url}  />
+          <img src={item.image}  />
         </div>
         <div className='content-back'>
           <h1>{item.name}</h1>
@@ -14,7 +14,7 @@ const PersonajeItem = ({item}) => {
               <strong>Name:</strong> {item.name}
             </li>
             <li>
-              <strong>Description:</strong> {item.biography.publisher}
+              <strong>Description:</strong> {item.biography}
             </li>
            
           </ul>
