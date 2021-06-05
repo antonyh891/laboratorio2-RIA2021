@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom'
 
-const PersonajeItem = ({item}) => {
+const Tarjeta= ({item}) => {
     return (
       <div> 
         <Card bg='dark'
@@ -18,10 +18,10 @@ const PersonajeItem = ({item}) => {
       <div className="botonCard">
         <Link to={`/personaje/${item.id}`}> <Button variant ="dark" size = "10px">
           Ver mas</Button></Link>
-        </div>
+      </div>
 </div>
 
     )
 }
 
-export default PersonajeItem
+export default Tarjeta

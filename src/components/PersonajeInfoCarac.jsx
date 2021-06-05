@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 
-function PersonajeInformacion({isLoading,informacion}) {
+function PersonajeInfoCarac({isLoading,informacion}) {
     return isLoading ? <h1>Loading</h1> :
         <div className="card bg-dark text-black" style={{ width: '14rem' }}  >
-            <img variant="top" src={informacion.image.url} height="220px"  />
+            <img variant="top" src={informacion.image.url} height="300px"  />
   
   
     <ListGroup className="list-group-flush text-center">
@@ -24,4 +24,4 @@ function PersonajeInformacion({isLoading,informacion}) {
     
 }
 
-export default PersonajeInformacion
+export default PersonajeInfoCarac

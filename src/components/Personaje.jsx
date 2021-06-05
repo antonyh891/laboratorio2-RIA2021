@@ -3,7 +3,8 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import PersonajeInformacion from './PersonajeInformacion';
+import PersonajeInfoCarac from './PersonajeInfoCarac';
+import PersonajeDetalle from './PersonajeDetalle';
 import NavBar from './navegacion/NavBar';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -35,9 +36,9 @@ const Personaje = () => {
         <NavBar />
         <Container className=" prueba justify-content-center">
           <Row >
-            <Col className="text justify-content-left" ><PersonajeInformacion isLoading={isLoading} informacion={personaje} /></Col>
-            <Col className="imagenInformacion text ">enConstruccionenConstruccionenConstruccionenConstruccionenConstruccion</Col>
-          </Row>
+            <Col className="text justify-content-left" ><PersonajeInfoCarac isLoading={isLoading} informacion={personaje} /></Col>
+            <Col className="text justify-content-left" ><PersonajeDetalle isLoading={isLoading} informacion={personaje} /></Col>
+           </Row>
         </Container>
       </div>
   

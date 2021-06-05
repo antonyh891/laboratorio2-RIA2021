@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
-import PersonajesTabla from '../PersonajesTabla';
+import PersonajesTabla from '../PersonajeListado';
 import Buscar from '../Buscar';
 import NavBar from '../navegacion/NavBar'
 
