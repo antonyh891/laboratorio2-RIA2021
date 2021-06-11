@@ -7,7 +7,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 function PersonajeDetalle({isLoading,informacion}) {
      return isLoading ? <h1>Loading</h1> :
      <div style={{ width: '30rem'}}>
-       <Card className ='imagenInformacion bg-dark text-white'  style={{ width: '30rem'}}>
+       <Card border="light" className ='imagenInformacion bg-dark text-white'  style={{ width: '30rem'}}>
           <Card.Body>
             <Card.Title>
               <h1>
