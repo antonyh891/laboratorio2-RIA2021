@@ -2,7 +2,6 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
-//import Card from 'react-bootstrap/Card'
 
 
 function PersonajeInfoCarac({isLoading,informacion}) {
