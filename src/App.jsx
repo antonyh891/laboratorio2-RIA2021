@@ -21,6 +21,7 @@ function App() {
      <Router>
         <Switch>
           <Route exact path='/personaje/:id' exact component={Personaje}></Route>
+          <Route exact path='/' exact component={Inicio}></Route>
           <Route exact path='/inicio' exact component={Inicio}></Route>
         </Switch>
       </Router>
