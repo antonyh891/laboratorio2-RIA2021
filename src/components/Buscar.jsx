@@ -9,11 +9,11 @@ const Buscar = ({search}) => {
     }
 
     return (
-        <section className="search">
+        <section className="search" border="light">
             <form>
-                <input type="text"
+                <input type="text"               
                 className="form-control"
-                placeholder="Find a character"
+                placeholder="Busque un personaje"
                 autoFocus
                 onChange={(e)=>onSearch(e.target.value)}
                 />
