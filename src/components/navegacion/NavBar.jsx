@@ -1,13 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
+import { FavoritosStateContext } from '../../FavoritosContext'
 
-function NavBar({search}) {
-    const[text,setText] = useState('')
 
-    const onSearch= (q)=>{
-        setText(q)
-        search(q)
-    }
+function NavBar() {
+   
+const listadoFavoritos= useContext(FavoritosStateContext) 
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
@@ -19,10 +17,15 @@ function NavBar({search}) {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                            <Link to="/inicio"> <a className="nav-link" aria-current="page" >Inicio</a></Link>
+                            <Link to="/"> <a className="nav-link" aria-current="page" >Inicio</a></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Favoritos</a>
+                            <Link to={{
+                                        pathname: `/favoritos`,
+                                        state: {
+                                        listadoFavoritos : [listadoFavoritos]
+                                        }, 
+                                     }}> <a className="nav-link" aria-current="page" >Favoritos</a></Link>
                             </li>
                         </ul>
                         </div>

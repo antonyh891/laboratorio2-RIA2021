@@ -1,30 +1,51 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios'
+import { useState, useContext,createContext } from 'react';
 import './App.css';
-import Cabezal from './components/Cabezal';
-import PersonajeListado from './components/PersonajeListado';
-import Buscar from './components/Buscar';
-import NavBar from './components/navegacion/NavBar'
 import Inicio from './components/paginas/Inicio'
+import Favoritos from './components/paginas/Favoritos'
 import Personaje from './components/Personaje'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import InformacionInfoCarac from './components/PersonajeInfoCarac';
-import PersonajeDetalle from './components/PersonajeDetalle';
+import {FavoritosStateContext, FavoritosSetStateContext, FavoritosEliminarContext} from './FavoritosContext'
 
-const token =  "10222942978676608"
 
 function App() {
+  const [favoritos, setFavoritos] = useState([])
+
+  const AgregarFavorito = (favorito)  => {
+    if (favoritos.length > 0){
+    setFavoritos([...favoritos, favorito])
+    }else{
+      setFavoritos([favorito])
+    }
+    console.log("operacion:",favoritos)
+}
+
+const EliminarFavorito = indice => {
+  const auxFavoritos = [...favoritos]
+  auxFavoritos.splice(indice.indice, 1)
+  setFavoritos(auxFavoritos)
   
+}
       return (
     
-   
-     <Router>
-        <Switch>
-          <Route exact path='/personaje/:id' exact component={Personaje}></Route>
-          <Route exact path='/inicio' exact component={Inicio}></Route>
-        </Switch>
-      </Router>
-      
+    <FavoritosStateContext.Provider value={favoritos}>
+      <FavoritosSetStateContext.Provider value={AgregarFavorito}>
+        <FavoritosEliminarContext.Provider value={EliminarFavorito}>
+          <Router>
+            <Switch>
+                <Route exact path='/personaje/:id'>
+                    <Personaje />
+                </Route>
+                <Route exact path='/'>
+                    <Inicio />
+                </Route>
+                <Route exact path='/favoritos'>
+                    <Favoritos />
+                </Route>
+            </Switch>
+          </Router>
+          </FavoritosEliminarContext.Provider>
+        </FavoritosSetStateContext.Provider>
+      </FavoritosStateContext.Provider>
     
   );
 

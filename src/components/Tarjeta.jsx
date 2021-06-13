@@ -3,7 +3,8 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom'
 
-const Tarjeta= ({item}) => {
+
+const Tarjeta= ({item}) => { 
     return (
       <div> 
         <Card bg='dark'
@@ -15,6 +16,7 @@ const Tarjeta= ({item}) => {
         <Card.Header align="center">{item.name} </Card.Header>
         <Card.Img variant="top" src={item.image.url} />
       </Card>
+     
       <div className="botonCard">
         <Link to={`/personaje/${item.id}`}> <Button variant ="dark" size = "10px">
           Ver mas</Button></Link>

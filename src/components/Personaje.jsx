@@ -9,7 +9,7 @@ import NavBar from './navegacion/NavBar';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Justice_League from '../imagenes/Justice_League.jpg'
+
 
 const Personaje = () => {
     const {id} =  useParams()

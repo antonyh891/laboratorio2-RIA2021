@@ -2,10 +2,9 @@ import React, {useState} from 'react'
 
 
 const Buscar = ({search}) => {
-    const[text,setText] = useState('')
+    
 
     const onSearch= (q)=>{
-        setText(q)
         search(q)
     }
 
@@ -17,7 +16,7 @@ const Buscar = ({search}) => {
                 placeholder="Find a character"
                 autoFocus
                 onChange={(e)=>onSearch(e.target.value)}
-                value={text}/>
+                />
             </form>
         </section>
     )
