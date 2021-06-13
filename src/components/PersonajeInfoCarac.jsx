@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
+import Card from 'react-bootstrap/Card'
 import { FavoritosSetStateContext, FavoritosStateContext,FavoritosEliminarContext } from '../FavoritosContext'
 
 
@@ -33,15 +34,13 @@ function PersonajeInfoCarac({isLoading,informacion}) {
             <ListGroup.Item className="bg-dark text-white">Fuerza: {informacion.powerstats.power}</ListGroup.Item>
             <ListGroup.Item className="bg-dark text-white">Combate: {informacion.powerstats.combat}</ListGroup.Item>
             </ListGroup>
-            <Button variant="primary">Agregar a Favoritos</Button>
-  
-  {
-  ver ?
-  <Button variant ="primary" onClick={() => setFavoritos({informacion}) } >
-         Agregar a Favoritos</Button>
-  : <Button variant ="primary" onClick={() => eliminarFavoritos({indice}, setVer(true)) } >
-  Quitar de Favoritos</Button> 
-}
+              {
+              ver ?
+              <Button variant ="primary" onClick={() => setFavoritos({informacion}) } >
+                    Agregar a Favoritos</Button>
+              : <Button variant ="primary" onClick={() => eliminarFavoritos({indice}, setVer(true)) } >
+              Quitar de Favoritos</Button> 
+            }
     
         </Card>
  }
