@@ -36,7 +36,7 @@ function Inicio() {
     if (items.length > 0){
   
     return (
-        <Container>
+        
        
     <Container style={{padding: '15px'}}>
     <Buscar search={(q)=>setQuery(q)}></Buscar>
@@ -44,12 +44,12 @@ function Inicio() {
         <PersonajesListado items={items} isLoading={isLoading} />
         
     </Container>
-    </Container>
+    
    
   );
 } else{
   return (
-    
+     
      
         
       
@@ -58,7 +58,7 @@ function Inicio() {
       <Buscar search={(q)=>setQuery(q)}></Buscar>
  
      </Container>
-     
+    
    );
 }
             
