@@ -34,15 +34,12 @@ const Personaje = () => {
          fetch() 
         },[])
     return (
-      <div>
-        <NavBar />
-        <Container className=" prueba justify-content-center">
-          <Row >
-            <Col className="text justify-content-left" ><PersonajeInfoCarac isLoading={isLoading} informacion={personaje} /></Col>
-            <Col className="text justify-content-left" ><PersonajeDetalle isLoading={isLoading} informacion={personaje} /></Col>
+        <Container className="centrado justify-content-center" style={{padding: '15px'}}>
+          <Row className = "justify-content-center">
+            <Col xs={"auto"}  className="col-xl-3 col-lg-3 col-xs-12 col-md-4  justify-content-center" ><PersonajeInfoCarac isLoading={isLoading} informacion={personaje} /></Col>
+            <Col xs={"auto"} style={{padding: '50px'}} className="col-xl-9 col-lg-8 col-xs-5 col-md-8 justify-content-center" ><PersonajeDetalle isLoading={isLoading} informacion={personaje} /></Col>
            </Row>
         </Container>
-      </div>
   
     )
 }

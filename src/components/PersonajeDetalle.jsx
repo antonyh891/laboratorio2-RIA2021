@@ -2,12 +2,13 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
+import Spinner from 'react-bootstrap/Spinner'
 
 
 function PersonajeDetalle({isLoading,informacion}) {
-     return isLoading ? <h1>Loading</h1> :
-     <div style={{ width: '30rem'}}>
-       <Card border="light" className ='imagenInformacion bg-dark text-white'  style={{ width: '30rem'}}>
+     return isLoading ? <Spinner animation="border" /> :
+     
+       <Card border="light" className ='imagenInformacion bg-dark text-white' >
           <Card.Body>
             <Card.Title>
               <h1>
@@ -32,7 +33,7 @@ function PersonajeDetalle({isLoading,informacion}) {
         </Card.Body>
       </Card>
 
-   </div>
+   
     
 }
 

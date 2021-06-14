@@ -6,10 +6,12 @@
 
 html,
 body {
+  min-height: 100vh; 
   background: #000 url('imagenes/liga.jpg') no-repeat center center/cover;
   height: 100vh;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
 }
 
 .prueba {
@@ -21,6 +23,15 @@ body {
   padding: 10px;
   
 }
+
+.centrado {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+  
 
 .text {
  
@@ -46,15 +57,7 @@ a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
-.container {
-    margin: auto;
-  padding: 40px;
-}
+
 
 .btn {
   display: inline-block;

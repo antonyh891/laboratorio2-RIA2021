@@ -22,9 +22,9 @@ function PersonajeInfoCarac({isLoading,informacion}) {
       }
     }
   });
-    return isLoading ? <h1>Loading</h1> :
-        <Card border="light" className="card bg-dark text-black" style={{ width: '14rem' }}  >
-            <img variant="top" src={informacion.image.url} height="300px"  />  
+    return isLoading ? <h1></h1> :
+        <Card border="light" className="card bg-dark text-black"   >
+            <img variant="top" src={informacion.image.url}   />  
   
             <ListGroup className="list-group-flush text-center" >
             <ListGroup.Item className="bg-dark text-white">Inteligencia: {informacion.powerstats.intelligence}</ListGroup.Item>

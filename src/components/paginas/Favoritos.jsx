@@ -12,14 +12,13 @@ function Favoritos() {
     console.log("esta",favoritos)
     return (
        
-        <div>   
-        <NavBar  />
-        <Container>
+       
+        <Container style={{padding: '15px'}}>
              
         <Row className = "justify-content-center">
         {
             favoritos.map(item=>(
-                <Col xs={"auto"} >
+                <Col xs={"auto"}  >
                 <Tarjeta key={item.informacion.id} item={item.informacion}></Tarjeta>
                 </Col>
             ))
@@ -27,7 +26,6 @@ function Favoritos() {
          </Row>
         
     </Container>
-    </div>
     
     )
 }

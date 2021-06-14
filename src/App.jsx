@@ -5,7 +5,8 @@ import Favoritos from './components/paginas/Favoritos'
 import Personaje from './components/Personaje'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {FavoritosStateContext, FavoritosSetStateContext, FavoritosEliminarContext} from './FavoritosContext'
-
+import Container from 'react-bootstrap/Container'
+import NavBar from './components/navegacion/NavBar'
 
 function App() {
   const [favoritos, setFavoritos] = useState([])
@@ -26,11 +27,15 @@ const EliminarFavorito = indice => {
   
 }
       return (
-    
+        <Router>
+        <NavBar />
+    <Container>
+      
     <FavoritosStateContext.Provider value={favoritos}>
       <FavoritosSetStateContext.Provider value={AgregarFavorito}>
         <FavoritosEliminarContext.Provider value={EliminarFavorito}>
-          <Router>
+          
+           
             <Switch>
                 <Route exact path='/personaje/:id'>
                     <Personaje />
@@ -42,11 +47,12 @@ const EliminarFavorito = indice => {
                     <Favoritos />
                 </Route>
             </Switch>
-          </Router>
+         
           </FavoritosEliminarContext.Provider>
         </FavoritosSetStateContext.Provider>
       </FavoritosStateContext.Provider>
-    
+      </Container>
+      </Router>
   );
 
 }

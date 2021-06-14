@@ -2,11 +2,12 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
 
 
 const Tarjeta= ({item}) => { 
     return (
-      <div> 
+    <Container>
         <Card bg='dark'
           key={item.id}
          // border="success"
@@ -21,7 +22,9 @@ const Tarjeta= ({item}) => {
         <Link to={`/personaje/${item.id}`}> <Button variant ="dark" size = "10px">
           Ver mas</Button></Link>
       </div>
-</div>
+
+      </Container> 
+
 
     )
 }

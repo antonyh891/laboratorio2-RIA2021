@@ -2,7 +2,7 @@ import { useEffect, useState, useContext,createContext } from 'react';
 import axios from 'axios'
 import PersonajesListado from '../PersonajeListado';
 import Buscar from '../Buscar';
-import NavBar from '../navegacion/NavBar'
+
 import Container from 'react-bootstrap/Container'
 
 
@@ -36,32 +36,29 @@ function Inicio() {
     if (items.length > 0){
   
     return (
-        <div>
-        <NavBar/>
-    <Container>
+        <Container>
+       
+    <Container style={{padding: '15px'}}>
     <Buscar search={(q)=>setQuery(q)}></Buscar>
      
         <PersonajesListado items={items} isLoading={isLoading} />
         
-         
-      
-      
     </Container>
-    </div>
+    </Container>
    
   );
 } else{
   return (
-    <div> 
+    
      
-         <NavBar  />
+        
       
-     <Container>
+     <Container style={{padding: '15px'}}>
        
       <Buscar search={(q)=>setQuery(q)}></Buscar>
  
      </Container>
-     </div>
+     
    );
 }
             
