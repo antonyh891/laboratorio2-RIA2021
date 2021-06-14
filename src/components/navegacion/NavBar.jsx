@@ -15,7 +15,7 @@ function NavBar() {
         <>
          
   <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand ></Navbar.Brand>
     <Nav className="mr-auto">
     <Link to to="/"><a className="nav-link" aria-current="page">Inicio</a></Link>
     <Link to to="/favoritos"><a className="nav-link" aria-current="page">Favoritos</a></Link>
