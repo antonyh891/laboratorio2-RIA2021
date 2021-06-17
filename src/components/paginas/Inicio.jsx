@@ -28,7 +28,7 @@ function Inicio() {
                 
           }
         }      
-         fetch() 
+         fetch('https://superheroapi.com') 
         },[query])      
         
        

@@ -29,7 +29,7 @@ const Personaje = () => {
                 
           }
              
-         fetch() 
+         fetch('https://superheroapi.com') 
         },[])
     return (
         <Container className="justify-content-center" style={{padding: '15px'}}>
