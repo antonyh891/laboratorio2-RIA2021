@@ -14,9 +14,17 @@ function NavBar() {
         
         <>
          
-  <Navbar bg="dark" variant="dark">
-  
-    <Nav className="mr-auto">
+  <Navbar bg="dark" className="navbar" variant="dark">
+  <Link to to="/"><Navbar.Brand>
+      <img
+        src='https://media.istockphoto.com/vectors/vector-superhero-silhouette-with-sunburst-effect-background-vector-id1162040662?k=6&m=1162040662&s=612x612&w=0&h=stfa6A3n_qxpQV5UMzOBOQKebtP0GLyY4VdH6xOeM8I='
+        width="40"
+        height="40"
+        className="circular--square d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    </Navbar.Brand></Link>
+    <Nav className=" mr-auto">
     <Link to to="/"><a className="nav-link" aria-current="page">Inicio</a></Link>
     <Link to to="/favoritos"><a className="nav-link" aria-current="page">Favoritos</a></Link>
     </Nav>

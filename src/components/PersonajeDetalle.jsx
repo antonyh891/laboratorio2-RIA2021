@@ -1,12 +1,11 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import ListGroup from 'react-bootstrap/ListGroup'
 import Spinner from 'react-bootstrap/Spinner'
+import Container from 'react-bootstrap/Container'
 
 
 function PersonajeDetalle({isLoading,informacion}) {
-     return isLoading ? <Spinner animation="border" /> :
+     return isLoading ? <Container>Cargando<Spinner animation="border"   /></Container> :
      
        <Card border="light" className ='imagenInformacion bg-dark text-white' >
           <Card.Body>

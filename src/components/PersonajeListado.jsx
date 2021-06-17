@@ -8,7 +8,7 @@ import Spinner from 'react-bootstrap/Spinner'
 
 const PersonajeListado = ({items,isLoading}) => {
     
-    return isLoading ? <Spinner animation="border" /> :
+    return isLoading ? <Spinner  className="justify-content-center" animation="border" /> :
     <Container className = "justify-content-center">
         <Row className = "justify-content-center">
         {

@@ -13,7 +13,7 @@ function Favoritos() {
     return (
        
        
-        <Container style={{padding: '15px'}}>
+        <Container  style={{padding: '15px'}}>
              
         <Row className = "justify-content-center">
         {

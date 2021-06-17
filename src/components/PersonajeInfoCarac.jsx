@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import Card from 'react-bootstrap/Card'
+import Spinner from 'react-bootstrap/Spinner'
+import Container from 'react-bootstrap/Container'
 import { FavoritosSetStateContext, FavoritosStateContext,FavoritosEliminarContext } from '../FavoritosContext'
 
 
@@ -22,7 +24,7 @@ function PersonajeInfoCarac({isLoading,informacion}) {
       }
     }
   });
-    return isLoading ? <h1></h1> :
+    return isLoading ?<h1></h1>  :
         <Card border="light" className="card bg-dark text-black"   >
             <img variant="top" src={informacion.image.url}   />  
   
