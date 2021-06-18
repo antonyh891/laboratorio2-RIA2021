@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container'
 
 
 function PersonajeDetalle({isLoading,informacion}) {
-     return isLoading ? <Container>Cargando<Spinner animation="border"   /></Container> :
+     return isLoading ? <h1 className="text-primary">Cargando<Spinner animation="border" className="text-primary" /></h1> :
      
-       <Card border="light" className ='imagenInformacion bg-dark text-white' >
+       <Card border="light" className ='bg-dark text-white' style ={{opacity: 0.9}} >
           <Card.Body>
             <Card.Title>
               <h1>
