@@ -14,7 +14,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "proxy": "https://superheroapi.com"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,4 +41,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
