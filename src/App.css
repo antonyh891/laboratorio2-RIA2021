@@ -16,6 +16,8 @@ body {
 
 .navbar {
   opacity: 0.9;
+  position: fixed;
+
 }
 
 .prueba {

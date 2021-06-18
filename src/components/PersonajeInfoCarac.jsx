@@ -38,9 +38,9 @@ function PersonajeInfoCarac({isLoading,informacion}) {
             </ListGroup>
               {
               ver ?
-              <Button variant ="primary" onClick={() => setFavoritos({informacion}) } >
+              <Button variant="outline-success" onClick={() => setFavoritos({informacion}) } >
                     Agregar a Favoritos</Button>
-              : <Button variant ="primary" onClick={() => eliminarFavoritos({indice}, setVer(true)) } >
+              : <Button variant="outline-danger"  onClick={() => eliminarFavoritos({indice}, setVer(true)) } >
               Quitar de Favoritos</Button> 
             }
     
