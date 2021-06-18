@@ -16,7 +16,7 @@ function Inicio() {
         if(query===''){
             setItems([])
         }else{ 
-          const result = await axios(`https://app-superheroes.herokuapp.com/api/api/10222942978676608/search/${query}`)
+          const result = await axios(`https://app-superheroes.herokuapp.com/https://superheroapi.com/api/10222942978676608/search/${query}`)
               if (result.data.response == "success"){  
                 console.log(result.data.results)
                 setItems(result.data.results)
