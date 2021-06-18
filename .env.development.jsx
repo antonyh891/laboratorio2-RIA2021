@@ -1,1 +1,1 @@
-HOST = "app-superheroes.herokuapp.com/"
+HOST = "https://superheroapi.com"
