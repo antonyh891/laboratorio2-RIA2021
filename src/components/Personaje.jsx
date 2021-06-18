@@ -17,7 +17,7 @@ const Personaje = () => {
     const[personaje,setPersonaje] = useState()
     useEffect(()=>{
     const fetch = async()=>{
-          const result = await axios(`/api/10222942978676608/${id}`)
+          const result = await axios(`api/api/10222942978676608/${id}`)
               if (result.data.response == "success"){  
                 console.log(result.data)  
                 setPersonaje(result.data);

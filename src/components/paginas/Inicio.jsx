@@ -18,7 +18,7 @@ function Inicio() {
         if(query===''){
             setItems([])
         }else{ 
-          const result = await axios(`/api/10222942978676608/search/${query}`)
+          const result = await axios(`api/api/10222942978676608/search/${query}`)
               if (result.data.response == "success"){  
                 console.log(result.data.results)
                 setItems(result.data.results)
