@@ -12,15 +12,13 @@ function Inicio() {
     const[isLoading,setLoading] = useState(true)
     const [query,setQuery] = useState('')
     
-    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = `https://superheroapi.com/api/10222942978676608/search/${query}`
-
+    
     useEffect(()=>{
       const fetch = async()=>{
         if(query===''){
             setItems([])
         }else{ 
-          const result = await axios(`https://app-superheroes.herokuapp.com/https://superheroapi.com/api/10222942978676608/search/${query}`)
+          const result = await axios(`https://superheroapi.com/api/10222942978676608/search/${query}`)
               if (result.data.response == "success"){  
                 console.log(result.data.results)
                 setItems(result.data.results)
