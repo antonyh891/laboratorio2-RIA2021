@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
@@ -31,6 +30,7 @@ const Personaje = () => {
              
          fetch() 
         },[])
+
     return (
         <Container className="justify-content-center" style={{padding: '15px'}}>
           <Row className = "centrado justify-content-center">

@@ -2,7 +2,7 @@ import { useEffect, useState, useContext,createContext } from 'react';
 import axios from 'axios'
 import PersonajesListado from '../PersonajeListado';
 import Buscar from '../Buscar';
-
+import Pagination from '../Pagination'
 import Container from 'react-bootstrap/Container'
 
 
@@ -11,6 +11,8 @@ function Inicio() {
     const[items,setItems] = useState([])
     const[isLoading,setLoading] = useState(true)
     const [query,setQuery] = useState('')
+    const [paginaActual, setPaginaActual] = useState(1);
+    const [itemsPorPagina] = useState(10);
     useEffect(()=>{
       const fetch = async()=>{
         if(query===''){
@@ -31,6 +33,13 @@ function Inicio() {
          fetch() 
         },[query])      
         
+                // Obtener items actuales
+  const indexUltimaPosicion = paginaActual * itemsPorPagina;
+  const indexPrimeraPosicion = indexUltimaPosicion - itemsPorPagina;
+  const itemsActuales = items.slice(indexPrimeraPosicion, indexUltimaPosicion);
+
+   // Cambiar pagina
+   const paginate = pageNumber => setPaginaActual(pageNumber);
        
 
     if (items.length > 0){
@@ -41,7 +50,12 @@ function Inicio() {
     <Container style={{padding: '15px'}}>
     <Buscar search={(q)=>setQuery(q)}></Buscar>
      
-        <PersonajesListado items={items} isLoading={isLoading} />
+        <PersonajesListado items={itemsActuales} isLoading={isLoading} />
+        <Pagination
+        postsPerPage={itemsPorPagina}
+        totalPosts={items.length}
+        paginate={paginate}
+      />
         
     </Container>
     

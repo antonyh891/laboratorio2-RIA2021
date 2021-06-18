@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import NavBar from '../navegacion/NavBar'
 import { FavoritosStateContext } from '../../FavoritosContext'
 import Tarjeta from '../Tarjeta'
 import Row from 'react-bootstrap/Row'
